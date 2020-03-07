@@ -56,7 +56,7 @@ pipeline {
 
                 script {
 
-                    myapp = docker.build("gcr.io/beaming-courage-261719/kubernetesrepos:${env.BUILD_ID}")
+                    myapp = docker.build("gcr.io/beaming-courage-261719/kubernetesrepo1:${env.BUILD_ID}")
 
                 }
 
