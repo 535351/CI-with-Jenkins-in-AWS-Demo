@@ -65,22 +65,3 @@ spec:
   selector:
 
     app: webapp7
----
-apiVersion: autoscaling/v1
-kind: HorizontalPodAutoscaler
-metadata:
-  name: webapp7-svc
-  labels:
-    app: webapp7
-spec:
-  scaleTargetRef:
-    apiVersion: extensions/v1beta1
-    kind: Deployment
-    name: webapp7 
-  minReplicas: 1
-  maxReplicas: 10
-  targetCPUUtilizationPercentage: 10
-status:
-  currentCPUUtilizationPercentage: 0
-  currentReplicas: 1
-  desiredReplicas: 1
