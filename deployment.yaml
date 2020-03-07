@@ -4,7 +4,7 @@ kind: Deployment
 
 metadata:
 
-  name: webapp6
+  name: webapp7
 
 spec:
 
@@ -14,7 +14,7 @@ spec:
 
    matchLabels:
 
-    app: webapp6
+    app: webapp7
 
   template:
 
@@ -22,13 +22,13 @@ spec:
 
       labels:
 
-        app: webapp6
+        app: webapp7
 
     spec:
 
       containers:
 
-      - name: webapp6
+      - name: webapp7
 
         image: gcr.io/beaming-courage-261719/kubernetesrepos1:tagversion
 
@@ -44,11 +44,11 @@ kind: Service
 
 metadata:
 
-  name: webapp6-svc
+  name: webapp7-svc
 
   labels:
 
-    app: webapp6
+    app: webapp7
 
 spec:
 
@@ -64,19 +64,19 @@ spec:
 
   selector:
 
-    app: webapp6
+    app: webapp7
 ---
 apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: webapp6-svc
+  name: webapp7-svc
   labels:
-    app: webapp6
+    app: webapp7
 spec:
   scaleTargetRef:
     apiVersion: extensions/v1beta1
     kind: Deployment
-    name: webapp6 
+    name: webapp7 
   minReplicas: 1
   maxReplicas: 10
   targetCPUUtilizationPercentage: 10
