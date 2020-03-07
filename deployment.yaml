@@ -30,7 +30,7 @@ spec:
 
       - name: webapp5
 
-        image: gcr.io/beaming-courage-261719/kubernetesrepos:tagversion
+        image: gcr.io/beaming-courage-261719/kubernetesrepos1:tagversion
 
         ports:
 
