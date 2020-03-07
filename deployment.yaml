@@ -79,13 +79,7 @@ spec:
     name: webapp6 
   minReplicas: 1
   maxReplicas: 10
-  metrics:
-  - type: Resource
-    resource:
-      name: cpu
-      target:
-        type: Utilization
-        averageUtilization: 50
+  targetCPUUtilizationPercentage: 10
 status:
   currentCPUUtilizationPercentage: 0
   currentReplicas: 1
